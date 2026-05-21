@@ -846,6 +846,26 @@
     }
 
     @media (max-width: 768px) {
+      /* Header mobile: boutons empilés en colonne, pleine largeur */
+      .header-inner {
+        height: auto;
+        padding: 0.6rem 0;
+        align-items: center;
+      }
+      .header-nav {
+        flex-direction: column;
+        gap: 0.35rem;
+        align-items: stretch;
+        min-width: 130px;
+      }
+      .header-nav .btn-ghost,
+      .header-nav .btn-primary {
+        width: 100%;
+        justify-content: center;
+        font-size: 0.75rem;
+        padding: 0.4rem 0.7rem;
+      }
+
       /* Hero mobile: dark bg, single column, text above screenshot */
       #hero::before { filter: none; opacity: 0; }
       #hero::after { background: none; }
@@ -889,8 +909,7 @@
       .container { padding: 0 1.25rem; }
       #features, #how, #pricing, #faq { padding: 64px 0; }
       .hero-cta { flex-direction: column; align-items: center; }
-      .header-nav .btn-ghost { font-size: 0.75rem; padding: 0.4rem 0.7rem; }
-      .header-nav .btn-primary { font-size: 0.75rem; padding: 0.4rem 0.7rem; }
+
       .reassurance-list { gap: 1rem; }
       .reassurance-item { font-size: 0.8125rem; }
       .pricing-price { font-size: 3rem; }
